@@ -8,6 +8,7 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
     <style>
