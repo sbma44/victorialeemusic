@@ -5,4 +5,4 @@ This is a dead-simple bootstrap site adapted from their carousel example. It's m
 
 License
 -------
-I can't imagine anyone will want this, but if you're building a similar website I suppose you're welcome to the HTML, PHP and Javascript under oh-let's-say the MIT License. The prose and images are not available for reuse (for one thing, I don't think I'm allowed to redistribute those stock photos).
+I can't imagine anyone will want this, but if you're building a similar website I suppose you're welcome to the HTML, PHP and Javascript under oh-let's-say the MIT License (see license.txt). The prose and images are not available for reuse (for one thing, I don't think I'm allowed to redistribute those stock photos).
