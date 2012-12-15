@@ -299,7 +299,7 @@
   </head>
 
   <body data-spy="scroll" data-target=".navbar">
-
+    <?php require_once('analytics.php');?>
 
 
     <!-- NAVBAR
