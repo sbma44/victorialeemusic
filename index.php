@@ -357,7 +357,7 @@
       <p class="lead">I am a musician and teacher based in Charlottesville, Virginia. Whether through instruction or performance, I hope I can share my love of music with you.</p>
     </div>
 
-    <hr class="featurette-divider">
+    <hr class="featurette-divider visible-phone">
 
     <!-- Carousel
     ================================================== -->
@@ -436,7 +436,7 @@
         <h2 class="featurette-heading">Weddings. <span class="muted">Something old, something new.</span></h2>
         
         <p class="lead">
-          I strive to deliver a memorable musical experience that reflects a couple's tastes and ideas 
+          I strive to deliver a memorable musical experience that reflects a couple's tastes and ideas. 
         </p>
 
         <p>
@@ -473,9 +473,9 @@
         <img class="featurette-image pull-right" src="images/music.jpg" alt="sheet music">
         <h2 class="featurette-heading">Lessons. <span class="muted">The gift of music can last a lifetime.</span></h2>
         
-        <h2>Piano</h2>
+        <p class="lead">Piano</p>
 
-        <p>The piano is my first love, and I can say without hesitation that it is the "Gateway Instrument": once a student has a firm foundation at the piano and can read music, the musical directions available to them are limitless. I prefer starting children at age 7, when most children are capable of paying attention for a 30-minute span without difficulty.
+        <p>The piano is my first love, and I can say without hesitation that it is the "Gateway Instrument": once a student has a firm foundation at the piano and can read music, the musical directions available to them are limitless. I prefer starting students at age 7, when most children are capable of paying attention for a 30-minute span without difficulty.
         Occasionally, however, I will take on a student younger than this, depending on the circumstances.</p>
 
         <p>Every student has a different style of learning. Those who study with me can count on patient instruction that adapts to their needs. Most of my students benefit
@@ -486,7 +486,7 @@
 
         <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F71053081&amp;color=768e48&amp;show_artwork=false"></iframe>
 
-        <h2>Celtic Harp</h2>
+        <p class="lead">Celtic Harp</p>
 
         <p>The Celtic harp’s qualities are akin to taking strings out of the piano and plucking them directly: direct action of ones fingers on strings is different from the hammers of the piano intervening between you and the string! Again, proper hand position and finger utilization are
         essential to moving forward with your playing of Celtic harp music. It is a very accessible instrument to learn to play and to play well. I utilize the Sylvia Woods method, augmented by the Deborah Friou exercises, or an alternate curriculum if my student does not already read music.</p>
