@@ -129,6 +129,13 @@
       display: none;      
     }
 
+    .form-result-nojs {
+      position: absolute;
+      margin-top: 60px;
+      margin-left: 30%;
+      z-index: 99;
+    }
+
     /* MARKETING CONTENT
     -------------------------------------------------- */
 
@@ -305,26 +312,28 @@
     </div><!-- /.navbar-wrapper -->
 
 
-    <?php if isset($_GET['q']): ?>
+ <?php if (isset($_GET['q'])): ?>
     <style type="text/css">
     #form-result-nojs-<?php print $_GET['q'];?> { display: block; }
     </style>
-    <?php endif;?>
-    
-    <div id="form-result-nojs-email" class="alert form-result"> 
+
+    <div id="form-result-nojs-email" class="alert form-result form-result-nojs"> 
       <button type="button" class="close" data-dismiss="alert">&times;</button>           
       <strong>Is that email right?</strong> Its formatting doesn't seem to be correct.
     </div>
 
-    <div id="form-result-nojs-incomplete" class="alert form-result">    
+    <div id="form-result-nojs-incomplete" class="alert form-result form-result-nojs">    
       <button type="button" class="close" data-dismiss="alert">&times;</button>        
       <strong>Oops</strong> Please be sure you've filled out all of the form's fields.
     </div>
 
-    <div id="form-result-nojs-thanks" class="alert alert-success form-result">     
+    <div id="form-result-nojs-thanks" class="alert alert-success form-result form-result-nojs">     
       <button type="button" class="close" data-dismiss="alert">&times;</button>       
       Thank you very much for reaching out to me. I'll be in touch as soon as I can.
     </div>
+  
+  <?php endif;?>
+
 
     <!-- Carousel
     ================================================== -->

@@ -1,7 +1,5 @@
 <?php
-
-// define('EMAIL_ADDRESS', 'contact@victorialeemusic.com');
-define('EMAIL_ADDRESS', 'thomas.j.lee@gmail.com');
+include('settings.php');
 
 // simple function to test for non-emptiness of all three fields
 function message_complete($fields) {
