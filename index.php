@@ -555,8 +555,7 @@
           // carousel 
           $('#myCarousel').carousel();
 
-          // contact form
-          /*
+          // contact form          
           $('#contact-form').submit(function(){
             $('.form-result').fadeOut();
             $('#ajax-spinner').show();
@@ -570,7 +569,7 @@
             });
             return false;
           });
-          */
+                    
         })
       }(window.jQuery)
     </script>
