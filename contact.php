@@ -14,11 +14,11 @@ $inputName = $_POST['inputName'];
 $inputEmail = $_POST['inputEmail'];
 $inputMessage = $_POST['inputMessage'];
 
-if (!filter_var($inputEmail, FILTER_VALIDATE_EMAIL)) {
-    $result = 'email';
-}
-elseif (!message_complete(array($inputName, $inputEmail, $inputMessage))) {
+if (!message_complete(array($inputName, $inputEmail, $inputMessage))) {
 	$result = 'incomplete';
+}
+elseif (!filter_var($inputEmail, FILTER_VALIDATE_EMAIL)) {
+    $result = 'email';
 }
 else {
 	$result = 'thanks';
