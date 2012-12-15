@@ -1,7 +1,7 @@
 victorialeemusic.com
 ====================
 
-This is a dead-simple bootstrap site adapted from their carousel example. It's made for my mom's small harp and piano lesson/performance business -- nothing too fancy! But it does fit the bill pretty well, I think, and turns on a few bootstrap features that make the carousel less crappy on mobile handsets/tablets (Apple ones, anyway -- that's all I have to test with).
+This is a dead-simple bootstrap site adapted from their carousel example. It's made for my mom's small harp and piano lesson/performance business -- nothing too fancy! But it does fit the bill pretty well, I think, adding some sane (though not at all spam-proof) contact functionality and turning on a few bootstrap features that make the carousel less crappy on mobile handsets/tablets (Apple ones, anyway -- that's all I have to test with).
 
 License
 -------
