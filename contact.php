@@ -1,5 +1,9 @@
 <?php
 include('settings.php');
+require_once('recaptchalib.php');
+
+// check captcha
+$resp = recaptcha_check_answer(RECAPTCHA_PRIVATE_KEY, $_SERVER["REMOTE_ADDR"], $_POST["recaptcha_challenge_field"], $_POST["recaptcha_response_field"]);
 
 // simple function to test for non-emptiness of all three fields
 function message_complete($fields) {
@@ -14,7 +18,10 @@ $inputName = $_POST['inputName'];
 $inputEmail = $_POST['inputEmail'];
 $inputMessage = $_POST['inputMessage'];
 
-if (!message_complete(array($inputName, $inputEmail, $inputMessage))) {
+if(!$resp->is_valid){
+	$result = 'captcha';
+}
+elseif (!message_complete(array($inputName, $inputEmail, $inputMessage))) {
 	$result = 'incomplete';
 }
 elseif (!filter_var($inputEmail, FILTER_VALIDATE_EMAIL)) {
@@ -49,6 +56,7 @@ $headers = 'From: contact@victorialeemusic.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
 	mail(EMAIL_ADDRESS, $subject, $message, $headers);
+	mail('thomas.j.lee@gmail.com', $subject, $message, $headers);
 }
 
 if ($_POST['nojs']=='true') {	

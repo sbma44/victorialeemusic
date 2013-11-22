@@ -526,7 +526,16 @@
                 <div class="controls">
                   <textarea id="inputMessage" name="inputMessage" class="input-xlarge" rows="5"></textarea>
                 </div>
-              </div>          
+              </div>   
+              <div class="control-group">                
+                <div class="controls">
+                  <?php
+                  require_once('settings.php');
+                  require_once('recaptchalib.php');                  
+                  echo recaptcha_get_html(RECAPTCHA_PUBLIC_KEY);
+                  ?>
+                </div>
+              </div>       
               <div class="control-group">
                 <div class="controls">     
                   <input type="hidden" name="nojs" value="true" />         
@@ -541,6 +550,10 @@
 
               <div id="form-result-incomplete" class="alert form-result">            
                 <strong>Oops!</strong> Please be sure you've filled out all of the form's fields.
+              </div>
+
+              <div id="form-result-captcha" class="alert form-result">            
+                <strong>Oops!</strong> Please be sure you've solved the captcha correctly, and accept my apologies for it being necessary.
               </div>
 
               <div id="form-result-thanks" class="alert alert-success form-result">            
@@ -587,9 +600,12 @@
             $.post('contact.php', {
               inputName: $('#inputName').val(),
               inputEmail: $('#inputEmail').val(),
-              inputMessage: $('#inputMessage').val(),              
+              inputMessage: $('#inputMessage').val(), 
+              recaptcha_challenge_field: $('#recaptcha_challenge_field').val(),
+              recaptcha_response_field: $('#recaptcha_response_field').val()
             }, function(data) {              
-              $('#ajax-spinner').hide();              
+              $('#ajax-spinner').hide();   
+              Recaptcha.reload();           
               $('#form-result-' + data.result).fadeIn();              
             });
             return false;
