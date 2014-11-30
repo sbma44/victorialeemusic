@@ -301,6 +301,10 @@
 
   <body data-spy="scroll" data-target=".navbar">
     <?php require_once('analytics.php');?>
+    <?php
+    require_once('thanksgiving.php');
+    $holidays = is_after_thanksgiving();
+    ?>
 
 
     <!-- NAVBAR
@@ -317,8 +321,9 @@
               <a class="brand" href="#">&nbsp;Victoria Lee Music</a>
 
               <ul class="nav">                              
+                <?php if ($holidays):?><li><a href="#holidays">Holidays</a></li><?php endif;?>
                 <li><a href="#weddings">Weddings</a></li>
-                <li><a href="#events">Events</a></li>
+                <?php if (!$holidays):?><li><a href="#events">Events</a></li><?php endif;?>
                 <li><a href="#lessons">Lessons</a></li>                
                 <li class="divider-vertical"></li>       
                 <li><a href="#contact">Contact</a></li>            
@@ -406,6 +411,14 @@
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
+        <?php if ($holidays):?>
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140">
+          <h2>Holidays</h2>
+          <p>This special time of year is about friends and family. The addition of holiday music can make it even sweeter.</p>
+          <p><a class="btn" href="#holidays">Hear more &raquo;</a></p>
+        </div><!-- /.span4 -->
+        <?php endif;?>
         <div class="span4">
           <img class="img-circle" data-src="holder.js/140x140">
           <h2>Weddings</h2>
@@ -418,21 +431,45 @@
           <p>Sharing my love of the piano and celtic harp is is a source of both satisfaction and pride. I can teach students as young as seven.</p>
           <p><a class="btn" href="#lessons">Get details &raquo;</a></p>          
         </div><!-- /.span4 -->
+        <?php if (!$holidays):?>
         <div class="span4">
           <img class="img-circle" data-src="holder.js/140x140">
           <h2>Events</h2>
           <p>Whether a holiday party, workplace gathering or community celebration, I'm delighted to provide a performance or crowdpleasing ambience.</p>
           <p><a class="btn" href="#events">Hear more &raquo;</a></p>
         </div><!-- /.span4 -->
+        <?php endif; ?>
       </div><!-- /.row -->
 
 
       <!-- START THE FEATURETTES -->
 
+      <?php if($holidays):?>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette" id="holidays">        
+        <img class="featurette-image pull-right" src="images/holidays.jpg" alt="candle in front of Christmas tree lights, photo by Flickr user LenDog64">
+        
+        <h2 class="featurette-heading">Holidays. <span class="muted">Special music for a special time of year.</span></h2>
+        
+        <p class="lead">
+          The list of events enhanced by the Celtic harp and piano goes on and on. Holidays are always more festive with music!
+        </p>        
+
+        <p>
+          A warm home, good food, friends and family -- and music! The holiday season is a busy time, as many people make their celebrations more special with my modern arrangements of traditional carols, folk songs and holiday classics.
+        </p>
+
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/61762089%3Fsecret_token%3Ds-1ojv5&amp;color=768e48&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=false&amp;show_artwork=false&amp;show_playcount=false&amp;show_reposts=false"></iframe>
+      </div>
+
+      <?php endif;?>
+
       <hr class="featurette-divider">
 
       <div class="featurette" id="weddings">        
-        <img class="featurette-image pull-right" src="images/rings.jpg" alt="wedding rings">
+        <img class="featurette-image <?php if ($holidays): ?>pull-left<?php else: ?>pull-right<?php endif;?>" src="images/rings.jpg" alt="wedding rings">
         
         <h2 class="featurette-heading">Weddings. <span class="muted">Something old, something new.</span></h2>
         
@@ -449,8 +486,10 @@
           example. However, most wedding couples favor my playing for the gathering of the guests through the processionals, and then again for the post-ceremony recessional. This is what my standard rates are based upon.
         </p>
 
-        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F71053063&amp;color=768e48&amp;show_artwork=false"></iframe>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F71053063&amp;show_playcount=false&amp;color=768e48&amp;show_artwork=false"></iframe>
       </div>
+
+      <?php if(!$holidays): ?>
 
       <hr class="featurette-divider">
 
@@ -464,9 +503,11 @@
           I’ve been called upon to play New Year’s Eve, Christmas, Valentine’s Day, St. Patrick’s Day, birthday celebrations, Spring garden parties, store openings, open houses, historical milestones, wine tastings, bed &amp; breakfast cocktail hours, socials and thematic events at retirement communities. And I'm sure my clients will continue to surprise me with new celebrations that music can help make memorable.
         </p>
 
-        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F71340016&amp;color=768e48&amp;auto_play=false&amp;show_artwork=false"></iframe>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F71340016&amp;show_playcount=false&amp;color=768e48&amp;auto_play=false&amp;show_artwork=false"></iframe>
         
       </div>
+
+      <?php endif;?>
 
       <hr class="featurette-divider">
 
@@ -485,7 +526,7 @@
 
         <p>It is very important to acquire the correct hand position early on in one’s piano career; bad habits are hard to break. This is main reason I sincerely ask my students to make time for weekly lessons, and to take at least 15-30 minutes daily to practice.</p>
 
-        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F71053081&amp;color=768e48&amp;show_artwork=false"></iframe>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F71053081&amp;show_playcount=false&amp;color=768e48&amp;show_artwork=false"></iframe>
 
         <p class="lead">Celtic Harp</p>
 
@@ -494,7 +535,7 @@
 
         <p>Again, I try to discover how best to reach the pedagogical heart of a student; by this I mean how best to teach this individual to acquire the most benefit within the shortest timeframe. It still takes time to form a Celtic harper, but commitment will yield a lovely skill with which you will surely delight countless others.</p>
 
-        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F71053067&amp;color=768e48&amp;show_artwork=false"></iframe>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F71053067&amp;show_playcount=false&amp;color=768e48&amp;show_artwork=false"></iframe>
 
       </div>
 
@@ -575,7 +616,7 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2012 Victoria Lee &middot; Celtic Harp photo by <a href="http://www.flickr.com/photos/flowers-of-the-sea/7071089977/">Eric C Bryan</a></p>
+        <p>&copy; 2012 Victoria Lee &middot; Celtic Harp photo by <a href="http://www.flickr.com/photos/flowers-of-the-sea/7071089977/">Eric C Bryan</a><?php if ($holidays):?> &middot; Holiday photo by <a href="https://www.flickr.com/photos/lendog64/11711894985/in/photolist-iQWwkT-69xDbB-aXr9yn-d1n2m9-dNgnbc-8TGnfo-ir63xe-udGoT-3pDwo6-7pFXtR-c6dgej-duWtgw-fLc6bP-v2tpm-hFqR2R-5EQ5MM-nMV55Y-3wCV3g-4fsJyg-iwcsKa-fLzC2L-fLc8iK-hFqr27-7pe5vw-5JXxW2-hXTkzN-4hgf43-fLc5Zi-hFqRbi-o3n251-943upK-dzN2EW-vRELB-84sdMG-6jdsvY-5M88pp-5KX3st-uJLoS-7ohz3L-8fqkfJ-4tKE5a-87H4wf-4eFbFS-488p1v-bddcnR-c6sVS3-5GPbgw-8fqghm-dMEkX9-8fn42c/">LenDog64</a><?php endif;?></p>
       </footer>
 
     </div><!-- /.container -->
