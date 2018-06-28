@@ -549,60 +549,7 @@
             
             <p class="lead">I'll be happy to answer any questions you might have.</p>
 
-            <form class="form-horizontal" action="contact.php" id="contact-form" method="post">
-              <div class="control-group">
-                <label class="control-label" for="inputName">Name</label>
-                <div class="controls">
-                  <input type="text" name="inputName" id="inputName" class="input-xlarge">
-                </div>
-              </div>
-              <div class="control-group">
-                <label class="control-label" for="inputEmail">Email</label>
-                <div class="controls">
-                  <input type="email" name="inputEmail" id="inputEmail" class="input-xlarge">
-                </div>
-              </div>          
-              <div class="control-group">
-                <label class="control-label" for="inputMessage">Your Message</label>
-                <div class="controls">
-                  <textarea id="inputMessage" name="inputMessage" class="input-xlarge" rows="5"></textarea>
-                </div>
-              </div>   
-              <div class="control-group">                
-                <div class="controls">
-                  <?php
-                  require_once('settings.php');
-                  require_once('recaptchalib.php');                  
-                  echo recaptcha_get_html(RECAPTCHA_PUBLIC_KEY);
-                  ?>
-                </div>
-              </div>       
-              <div class="control-group">
-                <div class="controls">     
-                  <input type="hidden" name="nojs" value="true" />         
-                  <button type="submit" id="contact-send" class="btn">Send</button>
-                  <img src="images/ajax-loader.gif" id="ajax-spinner" alt="spinner" />
-                </div>
-              </div>
-
-              <div id="form-result-email" class="alert form-result">            
-                <strong>Is that email right?</strong> Its formatting doesn't seem to be correct.
-              </div>
-
-              <div id="form-result-incomplete" class="alert form-result">            
-                <strong>Oops!</strong> Please be sure you've filled out all of the form's fields.
-              </div>
-
-              <div id="form-result-captcha" class="alert form-result">            
-                <strong>Oops!</strong> Please be sure you've solved the captcha correctly, and accept my apologies for it being necessary.
-              </div>
-
-              <div id="form-result-thanks" class="alert alert-success form-result">            
-                Thank you very much for reaching out to me. I'll be in touch as soon as I can.
-              </div>
-
-            </form>
-            
+            <div class="typeform-widget" data-url="https://vickylee3.typeform.com/to/wp8jCU" data-transparency="50" data-hide-headers=true data-hide-footer=true style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"> powered by <a href="https://admin.typeform.com/signup?utm_campaign=wp8jCU&utm_source=typeform.com-12277710-Basic&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=EN" style="color: #999" target="_blank">Typeform</a> </div>
           </div>
           
         </div>
