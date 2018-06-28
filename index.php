@@ -360,7 +360,7 @@
     <div class="featurette visible-phone" id="welcome-phone">
       <img class="featurette-image pull-left" src="images/carousel_victoria.jpg" alt="Victoria Lee">
       <h2 class="featurette-heading">Welcome.</h2>
-      <p class="lead">I am a musician and teacher based in Charlottesville, Virginia. Whether through instruction or performance, I hope I can share my love of music with you.</p>
+      <p class="lead">I am a musician and teacher based in Winchester, Virginia. Whether through instruction or performance, I hope I can share my love of music with you.</p>
     </div>
 
     <hr class="featurette-divider visible-phone">
@@ -374,7 +374,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>Welcome.</h1>
-              <p class="lead">I am a musician and teacher based in Charlottesville, Virginia. Whether through instruction or performance, I hope I can share my love of music with you.</p>              
+              <p class="lead">I am a musician and teacher based in Winchester, Virginia. Whether through instruction or performance, I hope I can share my love of music with you.</p>              
             </div>
           </div>
         </div>
